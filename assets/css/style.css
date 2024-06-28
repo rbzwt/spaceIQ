@@ -2523,9 +2523,9 @@ select:-webkit-autofill:focus {
 }
 .main-header .navigation ul li .sub-menu {
   position: absolute;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  top: 100%;
   max-width: 9.38rem;
   background-color: #EA7723;
   padding: 0.63rem 1.25rem;
@@ -2534,6 +2534,7 @@ select:-webkit-autofill:focus {
   visibility: hidden;
   pointer-events: none;
   border-radius: 0.63rem;
+  overflow: hidden;
 }
 .main-header .navigation ul li .sub-menu li {
   margin: 0 0 0.63rem 0;
@@ -2848,7 +2849,7 @@ select:-webkit-autofill:focus {
   position: relative;
   max-width: 57.69rem;
   width: 100%;
-  padding: 0 5.32rem 2rem 0;
+  padding: 3.13rem 5.32rem 2rem 0;
 }
 @media (max-width: 991px) {
   .customer-stories .cs-desc {

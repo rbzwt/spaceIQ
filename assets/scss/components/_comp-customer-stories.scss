@@ -9,7 +9,7 @@
             position: relative;
             max-width: rem(923px);
             width: 100%;
-            padding: 0 rem(85px) rem(32px) 0;
+            padding: rem(50px) rem(85px) rem(32px) 0;
 
             @include respond-below(lg) {
                 max-width: 100%;
