@@ -1,0 +1,72 @@
+.customer-stories {
+    padding: 45px 0 45px;
+    @include respond-below(lg) {
+        background-color: $white;
+    }
+
+    .cs {
+        &-desc {
+            position: relative;
+            max-width: rem(923px);
+            width: 100%;
+            padding: 0 rem(85px) rem(32px) 0;
+
+            @include respond-below(lg) {
+                max-width: 100%;
+                padding: 0 rem(40px) rem(32px) 0;
+            }
+
+            @include respond-below(md) {
+                max-width: 100%;
+                padding:0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $white;
+                background-size: cover;
+                width: 100vw;
+                height: 100%;
+                z-index: -1;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: calc(100% - rem(55px));
+                background-image: image("sledr-before.png");
+                background-size: cover;
+                width: 357px;
+                height: 222px;
+                z-index: -2;
+
+                @include respond-below(lg) {
+                    top: -80px;
+                    left: -23px;
+                    width: 114%;
+                }
+            }
+        }
+
+        &-data {
+            margin-bottom: rem(60px);
+
+            @include respond-below (md) {
+                margin-bottom: rem(40px);
+            }
+        }
+
+        &-wrap {
+            margin-bottom: rem(80px);
+            &-logo {
+                & img {
+                    max-height: 74px;
+                }
+            }
+        }
+    }
+}

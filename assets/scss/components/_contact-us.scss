@@ -1,0 +1,152 @@
+.contact-us {
+    position: relative;
+    // padding: rem(70px) 0;
+    @include respond-below(lg) {
+        padding: rem(30px) 0;
+     }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: rem(-139px);
+        width: rem(222px);
+        height: rem(710px);
+        background-image: image("orrange-net.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        overflow: hidden;
+
+        @include respond-below(lg) {
+            display: none;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: rem(70px);
+        width: rem(357px);
+        height: rem(222px);
+        background-image: image("last-net.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        overflow: hidden;
+
+        @include respond-below(sm) {
+            bottom: -27px;
+            width: 100%;
+            left: 0;
+        }
+    }
+    .cu {
+        &-heading {
+            max-width: rem(404px);
+
+            @include respond-below(lg) {
+                max-width: 100%;
+                margin-bottom: rem(40px);
+            }
+        }
+
+        &-main {
+            max-width: rem(580px);
+
+            @include respond-below(lg) {
+                max-width: 100%;
+            }
+
+            @include respond-below(md) {
+                padding: rem(38px) rem(15px);
+            }
+
+            padding: rem(43px) rem(49px);
+            background-color: $white;
+
+            h6 {
+                color: $primary-100;
+                font-weight: 700;
+            }
+        }
+
+        &-content {
+            input[type="submit"] {
+                background-color: transparent;
+                color: $primary-100;
+                font-size: rem(16px);
+                border: 1px solid $primary-100;
+                transition: 0.3s;
+                @include respond-below(md) {
+                    width: 100%;
+                }
+                &:hover {
+                    background-color: $primary-100;
+                    color: $white;
+                }
+            }
+        }
+
+        &-tab {
+            &-dropdown {
+                @include respond-above(md) {
+                    display: none;
+                }
+                padding: rem(16px) 0 rem(16px) rem(15px);
+                background-color: $primary-100;
+                color: $white;
+                font-weight: 700;
+                position: relative;
+                margin-bottom: rem(15px);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 5%;
+                    width: rem(15px);
+                    height: rem(15px);
+                    background-image: image("arrow-down-white.svg");
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                }
+            }
+        }
+        &-wrap {
+            display: flex;
+            @include respond-below(md) {
+                display: none;
+            }
+
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: rem(28px);
+
+            .btn {
+                flex: 1;
+                font-size: rem(14px);
+                font-weight: 700;
+                padding: rem(16px) rem(19px);
+                line-height: 1;
+                background-color: rgba($primary-100, 0.40);
+                color: $tertiary-100;
+
+                @include respond-below(md) {
+                    width: 100%;
+                }
+
+                &.active {
+                    background-color: $primary-100;
+                    opacity: 1;
+                }
+            }
+        }
+        &-nav {
+            display: none;
+            &.active {
+                display: flex;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,121 @@
+// css for WP-Admin
+#wpadminbar {
+	position: fixed;
+}
+
+.wrapper {
+	position: relative;
+	// display: grid;
+	// grid-template: 1fr auto / 1fr;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.main-container {
+	width: 100%;
+	align-self: start;
+}
+
+.slick-dots {
+	li {
+		padding: 0 rem(5px);
+	}
+}
+// .custom-checkbox{
+// 	padding: 16px 20px;
+// 	background-color: $primary-100;
+// }
+
+// Slick Style
+
+.slick-slider {
+	position: relative;
+	.slick-arrow {
+		background-image: image("left-circle.svg");
+		position: absolute;
+		top: 15%;
+		right: 0;
+		width: 48px;
+		height: 48px;
+		border: 0;
+		visibility: hidden;
+		@include respond-below(md) {
+			visibility:visible ;
+		}
+	}
+	.slick-next {
+		transform: rotate(180deg);
+	}
+	.slick-prev {
+		transform: rotate(0deg);
+	}
+}
+
+.swiper-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&.desktop {
+		margin-bottom: rem(21px);
+		@include respond-below(lg) {
+			display: none;
+		}
+	}
+	&.mobile {
+		display: none;
+		@include respond-below(lg) {
+			display: block;
+			text-align: center;
+			margin-top:rem(21px) ;
+		}
+	}
+
+	.arrows-btn {
+		font-size: rem(48px);
+		height: rem(48px);
+		background: none;
+		color: $primary-100;
+		border: 0;
+
+		&::before {
+			display: block;
+		}
+	}
+
+	.custom-dt {
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			list-style-type: none;
+			padding-left: 0;
+			margin: 0;
+		}
+
+		li {
+			margin: 0 rem(5px) rem(2px);
+
+			button {
+				font-size: 0px;
+				border-radius: 100%;
+				width: 15px;
+				height: 15px;
+				padding: 0;
+				border: 0;
+				background-color: $primary-100;
+				opacity: 0.6;
+			}
+
+			&.slick-active {
+				button {
+					background-color: $primary-100;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

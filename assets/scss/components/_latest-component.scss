@@ -1,0 +1,143 @@
+.latest-content {
+    padding: rem(70px) 0;
+    .lc {
+        &-heading {
+            max-width: rem(541px);
+            margin-bottom: rem(54px);
+            @include respond-below(md) {
+                max-width: 100%;
+                margin-bottom: rem(44px);
+            }
+            h2 {
+                margin-bottom: rem(30px);
+                @include respond-below(md) {
+                    margin-bottom: rem(19px);      
+                }
+            }    
+        }
+        &-image {
+            position: relative;
+            max-width: rem(531px);
+            width: 100%;
+            @include respond-below(lg) {
+                max-width: 100%;
+            }
+            &-wd {
+                position: relative;
+                padding-top: aspect-ratio(531, 354);
+                @include imgFit;
+                margin-bottom: rem(44px);
+                @include respond-below(md) {
+                    margin-bottom: rem(19px);
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .fetured {
+                position: absolute;
+                top: rem(20px);
+                left: rem(20px);
+                padding: rem(7px) rem(12px);
+                font-size: rem(12px);
+                background-color: $primary-100;
+                color: $white;
+                font-weight: 700;
+            }
+        }
+        &-content {
+            margin-bottom: rem(31px);
+            h6 {
+                color: $primary-100;
+                font-weight: 700;
+                margin-bottom: rem(18px);
+                @include respond-below(md) {
+                    font-size: rem(14px);
+                }
+            }
+            h3 {
+                margin-bottom: rem(23px);
+            }
+
+        }
+        &-news {
+            margin-bottom: rem(31px);
+            .btn-link {
+                @include respond-below(md) {
+                    font-size: rem(14px);
+                }
+            }
+        }
+        &-link {
+            @include respond-below(md) {
+                margin-bottom: rem(50px);
+            }
+            .btn-link {
+                @include respond-below(md) {
+                    font-size: rem(14px);
+                }
+            }
+        }
+        &-blog {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: rem(20px) rem(24px);
+            color: $white;
+            background-color: $primary-100;
+            &-content {
+                margin-bottom: rem(14px);
+                h6 {
+                    font-size: rem(12px);
+                    color: $white;
+                    font-weight: 700;
+                    margin-bottom: rem(15px);
+                }
+            }
+            .btn-link {
+                background-color: transparent;
+                color: $white;
+                font-size: rem(14px);
+                &::after {
+                    background-image: image("arrow-white.svg");
+                    z-index: 1;
+                }
+            }
+            &.blue {
+                background-color: $secondary-100;
+            }
+            &.sky {
+                background-color: $secondary-200;
+            }
+            &.yellow {
+                background-color: $primary-200;
+                color: $tertiary-100;
+                h6 {
+                    color: $tertiary-100;
+                }
+                .btn-link {
+                    color:$tertiary-100;
+                    &::after {
+                        background-image: image("arrow-black.svg");
+                    }
+                }
+            }
+        }
+        &-four {
+            .row {
+                margin-left: rem(-3.5px);
+                margin-right: rem(-3.5px);
+            }
+            [class*=cell-] {
+                padding-left: rem(3.5px);
+                padding-right: rem(3.5px);
+                margin-bottom: rem(5px);
+                @include respond-below(md) {
+                margin-bottom: rem(10px);
+                }
+            }
+        }
+    }
+}

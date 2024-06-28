@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.623" height="58.017" viewBox="0 0 68.623 58.017">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="68.623" height="58.017" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="noun_Computer_511516" clip-path="url(#clip-path)">
+    <g id="noun_Computer_511516-2" data-name="noun_Computer_511516" transform="translate(-8 -14)">
+      <path id="Path_39746" data-name="Path 39746" d="M73.356,14H11.268A3.289,3.289,0,0,0,8,17.291v43.3a3.288,3.288,0,0,0,3.268,3.29H34.959v5.671H28.832a1.234,1.234,0,0,0,0,2.468H55.86a1.234,1.234,0,0,0,0-2.468h-6.2V63.878H73.356a3.288,3.288,0,0,0,3.268-3.29v-43.3A3.289,3.289,0,0,0,73.356,14ZM11.268,16.468H73.356a.831.831,0,0,1,.817.823V52.4H10.451V17.291A.83.83,0,0,1,11.268,16.468ZM47.213,69.55h-9.8V63.879h9.8Zm26.142-8.139H11.268a.831.831,0,0,1-.817-.823V54.871H74.173v5.717A.831.831,0,0,1,73.356,61.411Z" fill="#fac90f"/>
+      <ellipse id="Ellipse_391" data-name="Ellipse 391" cx="1.225" cy="1.234" rx="1.225" ry="1.234" transform="translate(66.823 56.499)" fill="#fac90f"/>
+    </g>
+  </g>
+</svg>

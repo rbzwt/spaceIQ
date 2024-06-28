@@ -1,0 +1,73 @@
+.testimonials {
+    padding: rem(40px) 0;
+    @include respond-below(lg){
+       padding: rem(18px) 0;        
+    }
+    .t {
+        &-container {
+            @include container-space(left);
+            @include respond-below(lg){
+                @include container-space(right)
+            }
+            .swiper-controls {
+                .arrows-btn {
+                    padding: 0 rem(14px);
+                }
+            }
+        }
+        &-data {
+            h2 {
+                color: $primary-100;
+            }
+        }
+        &-card {
+            max-width: rem(734px);
+            width: 100%;
+            background-color: $white;
+            padding: rem(65px) rem(51px) rem(34px);
+            margin: 0 rem(60px) 0 0;
+            @include respond-below(lg) {
+                margin: 0;
+                padding: rem(40px) rem(19px);    
+            }
+            &-content {
+                margin-bottom: rem(21px);
+                img {
+                    max-height: rem(51px);
+                    object-fit: contain;
+                    margin-bottom: rem(50px);
+                    @include respond-below(sm){
+                    max-height: rem(27px);
+                    margin-bottom: rem(44px);
+                    }
+                }
+            }
+            &-name {
+                h6 {
+                    font-size: rem(14px);
+                    font-weight: 700;
+                    color: $primary-100;
+                    margin-bottom: rem(30px);
+                    @include respond-below(sm) {
+                        margin-bottom: rem(45px);    
+                    }
+                }
+            }
+        }
+        &-link {
+            text-align: end;
+            margin-right: rem(31px);
+            @include respond-below(sm) {
+                text-align: left;
+            }
+            .btn {
+                &-link {
+                    background-color: transparent;
+                    &::after {
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}

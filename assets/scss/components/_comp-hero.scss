@@ -1,0 +1,131 @@
+.hero-section {
+    padding: 44px 0;
+    .hs {
+        &-content {
+            // @include flex-center;
+            margin-bottom: rem(17px);
+        }
+
+        &-link {
+            a {
+                margin-right: rem(14px);
+
+                @include respond-below(md) {
+                    margin-right: 0px;
+                    margin-bottom: 11px;
+                }
+            }
+        }
+
+        &-image {
+            position: relative;
+            padding-top: aspect-ratio(484, 427);
+            @include imgFit;
+        }
+
+        &-image-wd {
+            max-width: rem(484px);
+            width: 100%;
+
+            @include respond-below(lg) {
+                margin: auto;
+            }
+
+            @include respond-below(md) {
+                max-width: 339px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-row {
+            padding: 0 rem(50px);
+            @include respond-below(lg) {
+                padding: 0px;
+            }
+        }
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        max-width: rem(246px);
+        width: 100%;
+        background-color: $secondary-100;
+        color: $white;
+        padding: rem(23px) rem(24px);
+        transition: 0.3s;
+        transform: translateY(-50%);
+        z-index: 999;
+        @include respond-below(md) {
+            max-width: 100%;
+            bottom: 0;
+            top: auto;
+            transform: translateY(0);
+        }
+        &.active {
+            right: -100%;
+        }
+
+        &-heading {
+            margin-bottom: rem(23px);           
+            h5 {
+                color: $white;
+                font-weight: 300;
+                font-size: rem(18px);
+                margin-bottom: rem(16px);
+            }
+            p{
+                font-size: rem(14px);
+            }
+        }
+        &-feature {
+            margin-bottom: rem(19px);
+            h6 {
+                color: $white;
+                font-weight: 700;   
+                margin-bottom: 0;             
+            }
+            button {
+                position: relative;
+                width: rem(30px);
+                height: rem(30px);
+                background: transparent;
+                border: 0;
+
+                &::after {
+                    @include icon("a");
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    font-size: rem(30px);
+                    color: $white;
+                }
+            }
+        }
+        .btn {
+            &-link {
+                color: white;
+                background-color: transparent;
+                padding-right: rem(20px);
+
+                &:hover {
+                    color: $primary-100;
+                }
+
+                &::after {
+                    top: 56%;
+                    background-image: image('arrow-white.svg');
+                    z-index: 0;
+                }
+            }
+        }
+
+    }
+
+}

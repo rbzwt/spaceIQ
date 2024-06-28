@@ -1,0 +1,147 @@
+.modern-workplace {
+    padding: 0 0 45px;
+
+    .mw {
+        &-data {
+            margin: rem(50px) auto;
+
+            h2 {
+                color: $secondary-100;
+            }
+
+            p {
+                max-width: rem(572px);
+                margin: auto;
+            }
+        }
+
+        &-wrap {
+            margin-bottom: 0;
+
+            @include respond-below(md) {
+                padding: 0 50px;
+            }
+
+            .mw-wrap-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 0;
+                background-color: transparent;
+                transition: 0.3s;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: rem(-68px);
+                    left: 50%;
+                    width: rem(36px);
+                    height: rem(36px);
+                    background-color: $white;
+                    transform: translateX(-50%) rotate(45deg);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s;
+                }
+
+                &.active {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                        bottom: rem(-55px);
+
+                        @include respond-below(lg) {
+                            bottom: rem(-65px);
+                        }
+
+                        @include respond-below(md) {
+                            bottom: rem(-72px);
+                            &.slick-current {
+                                opacity: 1;
+                                visibility: visible;
+                                bottom: rem(-55px);
+                            }
+                        }
+                    }
+
+                    h5 {
+                        color: $primary-100;
+                        border-bottom: 1px solid $primary-100;
+                    }
+                }
+            }
+
+            .slick-list {
+                padding-bottom: rem(37px);
+                margin-bottom: 0;
+            }
+
+            &-image {
+                margin-bottom: rem(23px);
+
+                img {
+                    width: rem(68px);
+                    height: rem(58px);
+                }
+            }
+
+            &-content {
+                h5 {
+                    font-size: rem(18px);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .tabs {
+        &-content {
+            position: relative;
+            background-color: $white;
+            padding: rem(40px) rem(55px);
+            @include respond-below(md) {
+                margin: 0 rem(-20px);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: rem(-34px);
+                bottom: rem(-34px);
+                width: 22.32rem;
+                height: 13.88rem;
+                background-image: url(../images/green-net.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: -1;
+                @include respond-below(md) {
+                    width: 100%;
+                    right: 0;
+                }
+            }
+
+            .tab {
+                &-content {
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    p {
+                        color: $primary-100;
+                        margin-bottom: rem(12px);
+                    }
+
+                    h6 {
+                        font-size: rem(14px);
+
+                        @include respond-below(md) {
+                            margin-bottom: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

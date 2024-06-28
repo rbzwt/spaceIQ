@@ -1,0 +1,136 @@
+/*--- footer ---*/
+.main-footer {
+	width: 100%;
+	height: auto;
+	align-self: end;
+	line-height: normal;
+	background: $tertiary-100;
+	padding: 70px 0;
+	@include respond-below(sm) {
+		text-align: center;
+		padding: 50px 0;
+	}
+	.row {
+		@include respond-below(sm) {
+			flex-direction: column-reverse;
+		}
+	}
+	.mf {
+		&-content {		
+			@include respond-below(sm) {
+				order: 4;
+			}	
+			&-wrap {
+				@include respond-below(lg) {
+					max-width: 400px;
+					margin-bottom: 30px;
+				}
+				@include respond-below(sm) {
+					display: flex;
+					flex-direction: column-reverse;
+				}
+			}		
+			&-image {
+				margin-bottom: rem(34px);
+				img {
+					width: rem(196px);
+					margin-bottom: rem(34px);
+				}
+				p {
+					color: $white;
+				}
+			}
+			&-social {
+				@include respond-below(sm){
+					justify-content: center;
+					margin-bottom: 0;
+				}
+				margin-bottom: rem(34px);
+				a {
+					font-size: rem(17px);
+					color: $white;
+					text-decoration: none;
+					margin-left: rem(30px);
+					transition: 0.3s;
+
+					&:first-child {
+						margin: 0;
+					}
+
+					&:hover {
+						color: $primary-100;
+					}
+				}
+			}			
+			&-link {
+				button {
+					border: 0;
+				}
+				.small {
+					display: none;
+					@include respond-below(sm) {
+						display: block;
+						margin: 10px 0 57px;
+					}
+				}
+			}
+		}
+		&-list {
+			@include respond-below(sm) {
+				order: 1;
+			}	
+			 ul {
+				list-style-type: none;
+				 li {
+					 a {
+						font-size: rem(14px);
+						color: $white;
+						text-decoration: none;
+						transform: 0.3s;
+
+						&:hover {
+							color: $primary-100;
+						}
+					}
+				}
+			}
+			&-orrange {
+				@include respond-below(sm) {
+					display: none;
+				}
+				ul {
+					list-style-type: none;
+					 li {
+						 a {
+							font-size: rem(14px);
+							color: $primary-100;
+							text-decoration: none;
+							transform: 0.3s;
+							&:hover {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.last-link {
+		@include respond-below(sm) {
+			display: none;
+		}
+		text-align: end;
+		 a {
+			color: $white;
+			font-weight: 500;
+			border: 1px solid $white;
+			padding: rem(12px) rem(51px);
+			text-decoration: none;
+			display: inline-block;
+			transition: 0.3s;
+			&:hover {
+				background-color: $primary-100;
+			}
+		}
+	}
+}
